@@ -4,11 +4,11 @@
  * Board type
  * Uncomment only one of these, depending on the board you are running the firmware on
  */
-//#define BOARD_ARDUINO_MEGA
-#define BOARD_ARDUINO_DUE
+#define BOARD_ARDUINO_MEGA
+//#define BOARD_ARDUINO_DUE
 
 // Baudrate to use when communicating over serial connection
-#define SERIAL_BAUDRATE 56000
+#define SERIAL_BAUDRATE 9600
 
 /*
  * Mount type
@@ -42,7 +42,7 @@
 #define AZ_ENABLE_PIN       38     // RAMPS 1.4 X stepper
 #define AZ_STEP_PIN         54     // RAMPS 1.4
 #define AZ_DIR_PIN          55     // RAMPS 1.4
-#define AZ_STEPS_PER_REV     0.    // My value: 119467.0  // How many steps the stepper motor needs to complete for one a horizontal 360degree revolution of the telescope (my setup: 3200 : 1 and 560 : 15)
+#define AZ_STEPS_PER_REV    119467.0    // My value: 119467.0  // How many steps the stepper motor needs to complete for one a horizontal 360degree revolution of the telescope (my setup: 3200 : 1 and 560 : 15)
 #define AZ_MAX_ACCEL        300    // Maximum acceleration for the azimuth stepper
 #define AZ_MAX_SPEED       4000    // Maximum speed for the azimuth stepper
 
@@ -55,7 +55,7 @@
 #define ALT_ENABLE_PIN       56     // RAMPS 1.4 Y stepper
 #define ALT_STEP_PIN         60     // RAMPS 1.4
 #define ALT_DIR_PIN          61     // RAMPS 1.4
-#define ALT_STEPS_PER_REV     0.    // How many steps the stepper motor needs to complete for a vertical 360degree revolution of the telescope (my setup: 5.18:1 and 3200 : 1 and 105 : 12 = 147840.0)
+#define ALT_STEPS_PER_REV     147840.0    // How many steps the stepper motor needs to complete for a vertical 360degree revolution of the telescope (my setup: 5.18:1 and 3200 : 1 and 105 : 12 = 147840.0)
 #define ALT_MAX_ACCEL         400   // Maximum acceleration for the altitude stepper
 #define ALT_MAX_SPEED        10000  // Maximum speed for the altitude stepper
 
@@ -95,10 +95,10 @@
  */
 
 // Uncomment the following line to enable various debug features that would otherwise not get compiled into the firmware
-#define DEBUG
+//#define DEBUG
 
 // Uncomment the following line to enable sending debug statements via the serial port
-#define DEBUG_SERIAL
+//#define DEBUG_SERIAL
 //#define REMOVE_SPLASH // Removes the large "dobson star tracker" splash ascii text
 
 // When initializing, a sanity check is performed on the constants set in config.h
@@ -106,17 +106,17 @@
 // If this is uncommented, the telescope will also stop and wait.
 // If DEBUG_SERIAL is enabled, the telescope will wait until the user enters a continue command.
 // If BUZZER_PIN is enabled, it will continuously beep until powered off or a continue command is received.
-#define DEBUG_STOP_ON_CONFIG_INSANITY
+//#define DEBUG_STOP_ON_CONFIG_INSANITY
 
 // Uncomment to enable debug statements about how long various tasks take to execute
 //#define DEBUG_TIMING
 // Uncomment to enable debug statements regarding stepper movement
-#define DEBUG_SERIAL_STEPPER_MOVEMENT
+//#define DEBUG_SERIAL_STEPPER_MOVEMENT
 // Uncomment to enable verbose debug statements regarding stepper movement (overrides DEBUG_SERIAL_STEPPER_MOVEMENT)
 //#define DEBUG_SERIAL_STEPPER_MOVEMENT_VERBOSE
 
 // Uncomment to enable debug statements regarding position calculations
-#define DEBUG_SERIAL_POSITION_CALC
+//#define DEBUG_SERIAL_POSITION_CALC
 
 // Uncomment the following line to enable debug messages of the GPS module
 //#define DEBUG_GPS
@@ -141,7 +141,7 @@
 #define LNG 12.0      // Observer longitude in degrees
 
 // The initial date and time that is used when GPS_FIXED_POS is enabled
-#define INITIAL_YEAR 1994
+#define INITIAL_YEAR 1999
 #define INITIAL_MONTH 6
 #define INITIAL_DAY 16
 #define INITIAL_HOUR 18
@@ -153,7 +153,7 @@
 #define TIMEZONE_CORRECTION_H (-1)
 
 // Updates from the GPS module are ignored if you uncomment the next line
-#define GPS_FIXED_POS
+//#define GPS_FIXED_POS
 
 // Serial 1 TX on Arduino is connected to RX on the GPS module. Z_MIN on the RAMPS shield
 #define GPS_SERIAL_PORT Serial1
